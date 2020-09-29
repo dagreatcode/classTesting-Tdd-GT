@@ -48,7 +48,7 @@ const render = require("./lib/htmlRenderer");
 //     }
 // });
 class Workers {
-  constructor(name, strength, hitPoints) {
+  constructor(name, id, email, contact) {
     if (!name) {
       throw new Error("You are missing the name.");
     }
