@@ -47,25 +47,29 @@ const render = require("./lib/htmlRenderer");
 //       console.log("Y");
 //     }
 // });
-class Workers {
-  constructor(name, id, email, contact) {
-    if (!name) {
-      throw new Error("You are missing the name.");
-    }
-    if (!id) {
-      throw new Error("You are missing the strength.");
-    }
-    if (!email) {
-      throw new Error("You are missing the hitPoints.");
-    }
-    if (!contact) {
-        throw new Error("You are missing the hitPoints.");
-    }
-    this.name = name;
-    this.id = id;
-    this.email = email;
-    this.contact = contact;
-} 
+// class Workers {
+//   constructor(name, id, email, contact) {
+//     if (!name) {
+//       throw new Error("You are missing the name.");
+//     }
+//     if (!id) {
+//       throw new Error("You are missing the strength.");
+//     }
+//     if (!email) {
+//       throw new Error("You are missing the hitPoints.");
+//     }
+//     if (!contact) {
+//         throw new Error("You are missing the hitPoints.");
+//     }
+//     this.name = name;
+//     this.id = id;
+//     this.email = email;
+//     this.contact = contact;
+
+//     const user = {
+//         this.name
+//     }
+// } 
 // and to create objects for each team member (using the correct classes as blueprints!)
 
 // After the user has input all employees desired, call the `render` function (required
