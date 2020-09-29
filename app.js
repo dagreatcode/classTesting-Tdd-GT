@@ -12,33 +12,60 @@ const render = require("./lib/htmlRenderer");
 
 
 // Write code to use inquirer to gather information about the development team members,
-inquirer.prompt([
-    {
-      type: "input",
-      name: "name",
-      message: "What is your name?"
-    },
-    {
-      type: "input",
-      name: "id",
-      message: "What is your id?"
-    },
-    {
-      type: "input",
-      name: "email",
-      message: "What is your email?"
-    },
-    {
-      type: "checkbox",
-      message: "Please leave a contact to reach.",
-      name: "contact",
-      choices: [
-        "Office number:", 
-        "GitHub:", 
-        "School:", 
-      ]
-    },
-])
+// inquirer.prompt([
+//     {
+//       type: "input",
+//       name: "name",
+//       message: "What is your name?"
+//     },
+//     {
+//       type: "input",
+//       name: "id",
+//       message: "What is your id?"
+//     },
+//     {
+//       type: "input",
+//       name: "email",
+//       message: "What is your email?"
+//     },
+//     {
+//       type: "checkbox",
+//       message: "Please leave a contact to reach.",
+//       name: "contact",
+//       choices: [
+//         "Office number:", 
+//         "GitHub:", 
+//         "School:", 
+//       ]
+//     },
+// ])
+// .then(function(response) {
+//     if ( ) {
+//       console.log("");
+//     }
+//     else {
+//       console.log("Y");
+//     }
+// });
+class Workers {
+  constructor(name, strength, hitPoints) {
+    if (!name) {
+      throw new Error("You are missing the name.");
+    }
+    if (!id) {
+      throw new Error("You are missing the strength.");
+    }
+    if (!email) {
+      throw new Error("You are missing the hitPoints.");
+    }
+    if (!contact) {
+        throw new Error("You are missing the hitPoints.");
+    }
+    this.name = name;
+    this.id = id;
+    this.email = email;
+    this.contact = contact;
+} 
 // and to create objects for each team member (using the correct classes as blueprints!)
 
 // After the user has input all employees desired, call the `render` function (required
