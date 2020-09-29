@@ -10,66 +10,45 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+const employeeArray = [];
+firstQuestions();
 
+function firstQuestions(userInput){
+    inquirer.prompt([
+        {
+          type: "input",
+          name: "name",
+          message: "What is your name?"
+        },
+        {
+          type: "input",
+          name: "id",
+          message: "What is your id?"
+        },
+        {
+          type: "input",
+          name: "email",
+          message: "What is your email?"
+        },
+        {
+          type: "list",
+          name: "role",
+          message: "Please select a role",
+          choices: [
+              "Manager",
+              "Engineer",
+              "Intern"
+          ]
+        },
+    ]).then(function(res){
+        console.log(res);
+        //Call ask 2nd question
+    })  
+    //defind 2nd question function
+    
+}//<--this is the end of the firstQuestion function
 // Write code to use inquirer to gather information about the development team members,
-// inquirer.prompt([
-//     {
-//       type: "input",
-//       name: "name",
-//       message: "What is your name?"
-//     },
-//     {
-//       type: "input",
-//       name: "id",
-//       message: "What is your id?"
-//     },
-//     {
-//       type: "input",
-//       name: "email",
-//       message: "What is your email?"
-//     },
-//     {
-//       type: "checkbox",
-//       message: "Please leave a contact to reach.",
-//       name: "contact",
-//       choices: [
-//         "Office number:", 
-//         "GitHub:", 
-//         "School:", 
-//       ]
-//     },
-// ])
-// .then(function(response) {
-//     if ( ) {
-//       console.log("");
-//     }
-//     else {
-//       console.log("Y");
-//     }
-// });
-// class Workers {
-//   constructor(name, id, email, contact) {
-//     if (!name) {
-//       throw new Error("You are missing the name.");
-//     }
-//     if (!id) {
-//       throw new Error("You are missing the strength.");
-//     }
-//     if (!email) {
-//       throw new Error("You are missing the hitPoints.");
-//     }
-//     if (!contact) {
-//         throw new Error("You are missing the hitPoints.");
-//     }
-//     this.name = name;
-//     this.id = id;
-//     this.email = email;
-//     this.contact = contact;
 
-//     const user = {
-//         this.name
-//     }
-// } 
 // and to create objects for each team member (using the correct classes as blueprints!)
 
 // After the user has input all employees desired, call the `render` function (required
@@ -91,3 +70,4 @@ const render = require("./lib/htmlRenderer");
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
+
