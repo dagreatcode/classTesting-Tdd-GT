@@ -43,17 +43,20 @@ function firstQuestions(userInput){
     ]).then(function(res){
         console.log(res);
         //Call ask 2nd question
+    }).catch(function(err){
+        if(err) throw err;
+        console.log("Hello");
     })  
     //defind 2nd question function
-    
-}//<--this is the end of the firstQuestion function
+
+} //<--this is the end of the firstQuestion function
 // Write code to use inquirer to gather information about the development team members,
 
 // and to create objects for each team member (using the correct classes as blueprints!)
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
-// generate and return a block of HTML including templated divs for each employee!
+// generate and return a block of HTML including templated div for each employee!
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
