@@ -12,7 +12,6 @@ const render = require("./lib/htmlRenderer");
 
 const employeeArray = [];
 firstQuestions();
-secondQuestions();
 
 function firstQuestions(userInput){
     inquirer.prompt([
