@@ -42,13 +42,8 @@ function firstQuestions(userInput){
         },
     ]).then((response) => {
        console.log(response);
-
-       const html = generatehtml(response);
-
-       fs.writeFile(outputPath, render(teamArray), function(err){
-           if (err) throw err;
            secondQuestions(); 
-       })
+    //    })
     }).catch(function(err){
         if(err) throw err;
         console.log("Hello");
@@ -84,19 +79,6 @@ function firstQuestions(userInput){
               ]
             },
         ]).then(function(response){
-
-            const info = new Intern(response.name, response.id, response.email, response.school );
-            employeeArray.push(response.secondQuestions);
-            employeeArray.push(response.secondQuestions);
-            // for (let i = 0; i < secondQuestions.length; i++) {
-            //     if(response === true){
-            //     secondQuestions();
-            //     }else{
-            //         fs.writeFile(outputPath, render(employeeArray), function(err) {
-            //         if (err) throw err;
-            //         console.log("Did It Work?.");
-            //     }
-            // }
         }).catch(function(err){
             if(err) throw err;
             console.log(err);
