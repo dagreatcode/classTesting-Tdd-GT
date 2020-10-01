@@ -12,6 +12,7 @@ const render = require("./lib/htmlRenderer");
 
 const employeeArray = [];
 firstQuestions();
+secondQuestions();
 
 function firstQuestions(userInput){
     inquirer.prompt([
@@ -41,14 +42,53 @@ function firstQuestions(userInput){
           ]
         },
     ]).then(function(res){
-        console.log(res);
+        if(res === false){
+            secondQuestions(); 
+        }      
         //Call ask 2nd question
+        secondQuestions(); 
     }).catch(function(err){
         if(err) throw err;
         console.log("Hello");
-    })  
+    }) 
+    
+    
     //defind 2nd question function
-
+    function secondQuestions(nextUserInput){
+        inquirer.prompt([
+            {
+              type: "input",
+              name: "name",
+              message: "What is your name?"
+            },
+            {
+              type: "input",
+              name: "id",
+              message: "What is your id?"
+            },
+            {
+              type: "input",
+              name: "email",
+              message: "What is your email?"
+            },
+            {
+              type: "list",
+              name: "role",
+              message: "Please select a role",
+              choices: [
+                  "Manager",
+                  "Engineer",
+                  "Intern"
+              ]
+            },
+        ]).then(function(res){
+            console.log(res);
+            //Call ask 2nd question
+        }).catch(function(err){
+            if(err) throw err;
+            console.log("Hello");
+        }) 
+    }
 } //<--this is the end of the firstQuestion function
 // Write code to use inquirer to gather information about the development team members,
 
@@ -73,4 +113,3 @@ function firstQuestions(userInput){
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
-
